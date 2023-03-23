@@ -1,0 +1,30 @@
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+table {
+  width: 100%;
+  /* border-collapse: collapse; */
+}
+
+.tooltip-container {
+  position: relative;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+}
+
+.tooltip-trigger {
+  color: blue;
+  font-weight: bold;
+}

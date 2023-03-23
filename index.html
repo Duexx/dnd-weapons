@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>DnD Weapons</title>
+  </head>
+  <body>
+    <hr>
+    <h1>Standard Weapon Set</h1>
+      <hr>
+    <table style="border: 1px solid">
+      <thead style="background-color: yellow">
+        <tr>
+          <th>Weapon</th>
+          <th>Damage Die</th>
+          <th>Damage Type</th>
+          <th>Versatile Damage Die</th>
+          <th>Proficiency</th>
+          <th>Type</th>
+          <th>Qualities</th>
+          <th>Skills</th>
+          <th>Unique Special (Bonus Action)</th>
+          <th>Unique Passive (Max Damage Die)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Battleaxe</td>
+          <td>1d8</td>
+          <td>Slashing</td>
+          <td>1d10</td>
+          <td>Martial</td>
+          <td>Melee</td>
+          <td>Heavy, Two Handed</td>
+          <td>Cleave, Lacerate, Crippling Strike</td>
+          <td>
+            <div class="tooltip-container">
+              <p
+                class="tooltip-trigger"
+                data-tooltip="Double your Strength Modifier on your next attack and damage roll. Cannot move until your next turn."
+                onclick="toggleTooltip(this)"
+              >
+                Overhead Slash
+              </p>
+              <div class="tooltip">Floating</div>
+            </div>
+          </td>
+          <td>
+            <div class="tooltip-container">
+              <p
+                class="tooltip-trigger"
+                data-tooltip="Cleave an additional 2 targets"
+                onclick="toggleTooltip(this)"
+              >
+                Whirling Cleave
+              </p>
+              <div class="tooltip">Floating</div>
+            </div>
+          </td>
+        </tr>
+        <tr style="background-color: lightgreen">
+          <td>Dagger</td>
+          <td>1d4</td>
+          <td>Slashing/Piercing</td>
+          <td>N/A</td>
+          <td>Simple</td>
+          <td>Melee/Ranged</td>
+          <td>Light, Finesse, Thrown</td>
+          <td>Piercing Strike</td>
+          <td>
+            <div class="tooltip-container">
+              <p
+                class="tooltip-trigger"
+                data-tooltip="Make an attack roll: On a succesful attack roll: apply 2 gaping wounds (2d6)"
+                onclick="toggleTooltip(this)"
+              >
+                Twist The Blade
+              </p>
+              <div class="tooltip">Floating</div>
+            </div>
+          </td>
+          <td>
+            <div class="tooltip-container">
+              <p
+                class="tooltip-trigger"
+                data-tooltip="Apply a gaping wounds (1d6)"
+                onclick="toggleTooltip(this)"
+              >
+                Successive Strike
+              </p>
+              <div class="tooltip">Floating</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Greataxe</td>
+          <td>1d12</td>
+          <td>Slashing</td>
+          <td>N/A</td>
+          <td>Martial</td>
+          <td>Melee</td>
+          <td>Heavy, Two Handed</td>
+          <td>Cleave, Lacerate, Prepare</td>
+          <td>
+            <div class="tooltip-container">
+              <p
+                class="tooltip-trigger"
+                data-tooltip="Advantage on the next attack, roll damage twice on a succesful attack roll. The next attack against you is at advantage"
+                onclick="toggleTooltip(this)"
+              >
+                Cleave Asunder
+              </p>
+              <div class="tooltip">Floating</div>
+            </div>
+          </td>
+          <td>
+            <div class="tooltip-container">
+              <p
+                class="tooltip-trigger"
+                data-tooltip="Double the total damage dealt"
+                onclick="toggleTooltip(this)"
+              >
+                Power Overwhelming
+              </p>
+              <div class="tooltip">Floating</div>
+            </div>
+          </td>
+        </tr>
+        <tr style="background-color: lightgreen">
+          <td>Greatsword</td>
+          <td>2d6</td>
+          <td>Slashing/Piercing</td>
+          <td>1d8</td>
+          <td>Martial</td>
+          <td>Melee</td>
+          <td>Heavy, Two Handed</td>
+          <td>Pommel Strike, Lacerate, Cleave</td>
+          <td>
+            <div class="tooltip-container">
+              <p
+                class="tooltip-trigger"
+                data-tooltip="Double your Strength Modifier on the attack roll. Deal a slashing and piercing strike (2d6 + 1d8)"
+                onclick="toggleTooltip(this)"
+              >
+                Switch Stance Strike
+              </p>
+              <div class="tooltip">Floating</div>
+            </div>
+          </td>
+          <td><div class="tooltip-container">
+            <p
+              class="tooltip-trigger"
+              data-tooltip="When slashing (1d6) deal an additional (1d8). When piercing deal an additional (1d6)"
+              onclick="toggleTooltip(this)"
+            >
+              Alternate
+            </p>
+            <div class="tooltip">Floating</div></td>
+        </tr>
+        <tr>
+          <td>Halberd</td>
+          <td>1d10</td>
+          <td>Slashing</td>
+          <td>N/A</td>
+          <td>Martial</td>
+          <td>Melee</td>
+          <td>Heavy, Two Handed, Reach</td>
+          <td>Lacerate, Cleave, Rush Attack</td>
+          <td>
+            <div class="tooltip-container">
+            <p
+              class="tooltip-trigger"
+              data-tooltip="Cleave and Topple"
+              onclick="toggleTooltip(this)"
+            >
+              Sweep
+            </p>
+            <div class="tooltip">Floating</div>
+          </div>
+        </td>
+          <td><div class="tooltip-container">
+            <p
+              class="tooltip-trigger"
+              data-tooltip="Knock the enemy back (Up to large, up to 10ft) and prepare an attack action"
+              onclick="toggleTooltip(this)"
+            >
+              Knock n Prep
+            </p>
+            <div class="tooltip">Floating</div>
+          </div></td>
+        </tr>
+        <tr style="background-color: lightgreen">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr style="background-color: lightgreen">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr style="background-color: lightgreen">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr style="background-color: lightgreen">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr style="background-color: lightgreen">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr style="background-color: lightgreen">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr style="background-color: lightgreen">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr style="background-color: lightgreen">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr style="background-color: lightgreen">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr style="background-color: lightgreen">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr style="background-color: lightgreen">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr style="background-color: lightgreen">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr style="background-color: lightgreen">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr style="background-color: lightgreen">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+  <script src="handler.js"></script>
+</html>
